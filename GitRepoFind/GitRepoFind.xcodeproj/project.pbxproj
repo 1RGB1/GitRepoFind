@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		E0AC375726F68826001F1E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375526F68826001F1E8F /* Main.storyboard */; };
 		E0AC375926F68828001F1E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375826F68828001F1E8F /* Assets.xcassets */; };
 		E0AC375C26F68828001F1E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375A26F68828001F1E8F /* LaunchScreen.storyboard */; };
+		E0AC378826F68D10001F1E8F /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC378726F68D10001F1E8F /* ReusableProtocol.swift */; };
+		E0AC378A26F68D40001F1E8F /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC378926F68D40001F1E8F /* CellConfigurable.swift */; };
+		E0AC378C26F68D6D001F1E8F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC378B26F68D6D001F1E8F /* UIViewExtension.swift */; };
+		E0AC378E26F68D89001F1E8F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC378D26F68D89001F1E8F /* UITableViewExtension.swift */; };
+		E0AC379026F68DA1001F1E8F /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC378F26F68DA1001F1E8F /* UITableViewCellExtension.swift */; };
+		E0AC379226F68DBC001F1E8F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC379126F68DBC001F1E8F /* UIViewControllerExtension.swift */; };
+		E0AC379426F68DD3001F1E8F /* MockHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC379326F68DD3001F1E8F /* MockHandler.swift */; };
+		E0AC379626F68E6E001F1E8F /* BaseCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC379526F68E6E001F1E8F /* BaseCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +47,14 @@
 		E0AC375D26F68828001F1E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0AC376226F68829001F1E8F /* GitRepoFindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitRepoFindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC376826F68829001F1E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0AC378726F68D10001F1E8F /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
+		E0AC378926F68D40001F1E8F /* CellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
+		E0AC378B26F68D6D001F1E8F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		E0AC378D26F68D89001F1E8F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		E0AC378F26F68DA1001F1E8F /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		E0AC379126F68DBC001F1E8F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		E0AC379326F68DD3001F1E8F /* MockHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHandler.swift; sourceTree = "<group>"; };
+		E0AC379526F68E6E001F1E8F /* BaseCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellViewModel.swift; sourceTree = "<group>"; };
 		FEA2AFC8833310C6A8C23DB3 /* Pods-GitRepoFind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +95,6 @@
 				D036F0B3884FC4D1547E44F5 /* Pods-GitRepoFindTests.debug.xcconfig */,
 				C73B8DC5069F0697CB0F6307 /* Pods-GitRepoFindTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,6 +153,7 @@
 		E0AC378026F68A0E001F1E8F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E0AC379526F68E6E001F1E8F /* BaseCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,6 +176,9 @@
 		E0AC378326F68A23001F1E8F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E0AC378526F68CF9001F1E8F /* Protocol */,
+				E0AC378626F68D00001F1E8F /* Extension */,
+				E0AC379326F68DD3001F1E8F /* MockHandler.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -169,6 +188,26 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E0AC378526F68CF9001F1E8F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E0AC378726F68D10001F1E8F /* ReusableProtocol.swift */,
+				E0AC378926F68D40001F1E8F /* CellConfigurable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E0AC378626F68D00001F1E8F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E0AC378B26F68D6D001F1E8F /* UIViewExtension.swift */,
+				E0AC378D26F68D89001F1E8F /* UITableViewExtension.swift */,
+				E0AC378F26F68DA1001F1E8F /* UITableViewCellExtension.swift */,
+				E0AC379126F68DBC001F1E8F /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +377,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AC378826F68D10001F1E8F /* ReusableProtocol.swift in Sources */,
+				E0AC379626F68E6E001F1E8F /* BaseCellViewModel.swift in Sources */,
+				E0AC378E26F68D89001F1E8F /* UITableViewExtension.swift in Sources */,
+				E0AC378A26F68D40001F1E8F /* CellConfigurable.swift in Sources */,
+				E0AC379026F68DA1001F1E8F /* UITableViewCellExtension.swift in Sources */,
+				E0AC379426F68DD3001F1E8F /* MockHandler.swift in Sources */,
+				E0AC378C26F68D6D001F1E8F /* UIViewExtension.swift in Sources */,
+				E0AC379226F68DBC001F1E8F /* UIViewControllerExtension.swift in Sources */,
 				E0AC375026F68826001F1E8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
