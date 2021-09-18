@@ -12,6 +12,8 @@
 - [ProgressHUD] To show loading when calling api and show success or fail view when api response returns
 - [Codable] To easily parse api response to custome models
 - [Alamofire] To manage api calls
+- [RXSwift] To manage objects and data using reactive programming
+- [RXCocoa] To manage and update UI using reactive programming
 
 ## Author
 
