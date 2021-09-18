@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E0AC375026F68826001F1E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC374F26F68826001F1E8F /* AppDelegate.swift */; };
-		E0AC375226F68826001F1E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC375126F68826001F1E8F /* SceneDelegate.swift */; };
-		E0AC375426F68826001F1E8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC375326F68826001F1E8F /* ViewController.swift */; };
 		E0AC375726F68826001F1E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375526F68826001F1E8F /* Main.storyboard */; };
 		E0AC375926F68828001F1E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375826F68828001F1E8F /* Assets.xcassets */; };
 		E0AC375C26F68828001F1E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375A26F68828001F1E8F /* LaunchScreen.storyboard */; };
-		E0AC376726F68829001F1E8F /* GitRepoFindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC376626F68829001F1E8F /* GitRepoFindTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,17 +26,12 @@
 /* Begin PBXFileReference section */
 		E0AC374C26F68826001F1E8F /* GitRepoFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepoFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC374F26F68826001F1E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0AC375126F68826001F1E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E0AC375326F68826001F1E8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0AC375626F68826001F1E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0AC375826F68828001F1E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0AC375B26F68828001F1E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0AC375D26F68828001F1E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0AC376226F68829001F1E8F /* GitRepoFindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitRepoFindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0AC376626F68829001F1E8F /* GitRepoFindTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoFindTests.swift; sourceTree = "<group>"; };
 		E0AC376826F68829001F1E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0AC377126F68829001F1E8F /* GitRepoFindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoFindUITests.swift; sourceTree = "<group>"; };
-		E0AC377326F68829001F1E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +57,6 @@
 			children = (
 				E0AC374E26F68826001F1E8F /* GitRepoFind */,
 				E0AC376526F68829001F1E8F /* GitRepoFindTests */,
-				E0AC377026F68829001F1E8F /* GitRepoFindUITests */,
 				E0AC374D26F68826001F1E8F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,13 +73,12 @@
 		E0AC374E26F68826001F1E8F /* GitRepoFind */ = {
 			isa = PBXGroup;
 			children = (
-				E0AC374F26F68826001F1E8F /* AppDelegate.swift */,
-				E0AC375126F68826001F1E8F /* SceneDelegate.swift */,
-				E0AC375326F68826001F1E8F /* ViewController.swift */,
-				E0AC375526F68826001F1E8F /* Main.storyboard */,
-				E0AC375826F68828001F1E8F /* Assets.xcassets */,
-				E0AC375A26F68828001F1E8F /* LaunchScreen.storyboard */,
-				E0AC375D26F68828001F1E8F /* Info.plist */,
+				E0AC378326F68A23001F1E8F /* Common */,
+				E0AC378426F68A2E001F1E8F /* Network */,
+				E0AC378226F68A1D001F1E8F /* Model */,
+				E0AC378126F68A13001F1E8F /* View */,
+				E0AC378026F68A0E001F1E8F /* ViewModel */,
+				E0AC377F26F68A04001F1E8F /* SupportingFiles */,
 			);
 			path = GitRepoFind;
 			sourceTree = "<group>";
@@ -96,19 +86,56 @@
 		E0AC376526F68829001F1E8F /* GitRepoFindTests */ = {
 			isa = PBXGroup;
 			children = (
-				E0AC376626F68829001F1E8F /* GitRepoFindTests.swift */,
 				E0AC376826F68829001F1E8F /* Info.plist */,
 			);
 			path = GitRepoFindTests;
 			sourceTree = "<group>";
 		};
-		E0AC377026F68829001F1E8F /* GitRepoFindUITests */ = {
+		E0AC377F26F68A04001F1E8F /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				E0AC377126F68829001F1E8F /* GitRepoFindUITests.swift */,
-				E0AC377326F68829001F1E8F /* Info.plist */,
+				E0AC374F26F68826001F1E8F /* AppDelegate.swift */,
+				E0AC375826F68828001F1E8F /* Assets.xcassets */,
+				E0AC375A26F68828001F1E8F /* LaunchScreen.storyboard */,
+				E0AC375D26F68828001F1E8F /* Info.plist */,
 			);
-			path = GitRepoFindUITests;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E0AC378026F68A0E001F1E8F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E0AC378126F68A13001F1E8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0AC375526F68826001F1E8F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0AC378226F68A1D001F1E8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E0AC378326F68A23001F1E8F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E0AC378426F68A2E001F1E8F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0AC375426F68826001F1E8F /* ViewController.swift in Sources */,
 				E0AC375026F68826001F1E8F /* AppDelegate.swift in Sources */,
-				E0AC375226F68826001F1E8F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0AC376726F68829001F1E8F /* GitRepoFindTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +401,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GitRepoFind/Info.plist;
+				DEVELOPMENT_TEAM = R2GAVQMNSM;
+				INFOPLIST_FILE = GitRepoFind/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,7 +420,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GitRepoFind/Info.plist;
+				DEVELOPMENT_TEAM = R2GAVQMNSM;
+				INFOPLIST_FILE = GitRepoFind/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
