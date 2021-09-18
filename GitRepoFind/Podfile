@@ -11,7 +11,7 @@ target 'GitRepoFind' do
   # Pods for GitRepoFind
   pod 'UIScrollView-InfiniteScroll'
   pod 'ProgressHUD'
-  pod 'Alamofire'
+  pod 'RxAlamofire'
   pod 'Kingfisher'
   pod 'RxSwift'
   pod 'RxCocoa'
