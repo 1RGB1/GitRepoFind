@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		3867BA8DF5928D97929FBE50 /* Pods_GitRepoFind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C2791EC92960E3B7A589ED /* Pods_GitRepoFind.framework */; };
 		D134D30FB25A9EC90E101747 /* Pods_GitRepoFindTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0BAD03E1680350CA33D02D /* Pods_GitRepoFindTests.framework */; };
+		E035E7C526F71832008DFA89 /* ApiBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7C426F71832008DFA89 /* ApiBaseRouter.swift */; };
+		E035E7C726F7183F008DFA89 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7C626F7183F008DFA89 /* NetworkConstants.swift */; };
+		E035E7C926F7184C008DFA89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7C826F7184C008DFA89 /* NetworkManager.swift */; };
+		E035E7CB26F71856008DFA89 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7CA26F71856008DFA89 /* NetworkError.swift */; };
+		E035E7CD26F71D8D008DFA89 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7CC26F71D8D008DFA89 /* ErrorModel.swift */; };
+		E035E7CF26F71E54008DFA89 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7CE26F71E54008DFA89 /* BaseModel.swift */; };
+		E035E7D126F71E80008DFA89 /* ReposModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7D026F71E80008DFA89 /* ReposModel.swift */; };
+		E035E7D326F71EC6008DFA89 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7D226F71EC6008DFA89 /* RepoModel.swift */; };
+		E035E7D526F71FCD008DFA89 /* OwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7D426F71FCD008DFA89 /* OwnerModel.swift */; };
 		E0AC375026F68826001F1E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC374F26F68826001F1E8F /* AppDelegate.swift */; };
 		E0AC375726F68826001F1E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375526F68826001F1E8F /* Main.storyboard */; };
 		E0AC375926F68828001F1E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375826F68828001F1E8F /* Assets.xcassets */; };
@@ -39,6 +48,15 @@
 		529DF1C8F66BC52C824D58C6 /* Pods-GitRepoFind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.release.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.release.xcconfig"; sourceTree = "<group>"; };
 		C73B8DC5069F0697CB0F6307 /* Pods-GitRepoFindTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.release.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.release.xcconfig"; sourceTree = "<group>"; };
 		D036F0B3884FC4D1547E44F5 /* Pods-GitRepoFindTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E035E7C426F71832008DFA89 /* ApiBaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBaseRouter.swift; sourceTree = "<group>"; };
+		E035E7C626F7183F008DFA89 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		E035E7C826F7184C008DFA89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E035E7CA26F71856008DFA89 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E035E7CC26F71D8D008DFA89 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		E035E7CE26F71E54008DFA89 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		E035E7D026F71E80008DFA89 /* ReposModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposModel.swift; sourceTree = "<group>"; };
+		E035E7D226F71EC6008DFA89 /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
+		E035E7D426F71FCD008DFA89 /* OwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerModel.swift; sourceTree = "<group>"; };
 		E0AC374C26F68826001F1E8F /* GitRepoFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepoFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC374F26F68826001F1E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0AC375626F68826001F1E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +114,24 @@
 				C73B8DC5069F0697CB0F6307 /* Pods-GitRepoFindTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E035E7C226F717FD008DFA89 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7C426F71832008DFA89 /* ApiBaseRouter.swift */,
+				E035E7C626F7183F008DFA89 /* NetworkConstants.swift */,
+				E035E7CA26F71856008DFA89 /* NetworkError.swift */,
+				E035E7C826F7184C008DFA89 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E035E7C326F71806008DFA89 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		E0AC374326F68826001F1E8F = {
@@ -169,6 +205,11 @@
 		E0AC378226F68A1D001F1E8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E035E7CE26F71E54008DFA89 /* BaseModel.swift */,
+				E035E7CC26F71D8D008DFA89 /* ErrorModel.swift */,
+				E035E7D026F71E80008DFA89 /* ReposModel.swift */,
+				E035E7D226F71EC6008DFA89 /* RepoModel.swift */,
+				E035E7D426F71FCD008DFA89 /* OwnerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +227,8 @@
 		E0AC378426F68A2E001F1E8F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E035E7C226F717FD008DFA89 /* Manager */,
+				E035E7C326F71806008DFA89 /* DataSource */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -377,14 +420,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E035E7C926F7184C008DFA89 /* NetworkManager.swift in Sources */,
 				E0AC378826F68D10001F1E8F /* ReusableProtocol.swift in Sources */,
+				E035E7CD26F71D8D008DFA89 /* ErrorModel.swift in Sources */,
 				E0AC379626F68E6E001F1E8F /* BaseCellViewModel.swift in Sources */,
+				E035E7C726F7183F008DFA89 /* NetworkConstants.swift in Sources */,
+				E035E7D126F71E80008DFA89 /* ReposModel.swift in Sources */,
+				E035E7C526F71832008DFA89 /* ApiBaseRouter.swift in Sources */,
 				E0AC378E26F68D89001F1E8F /* UITableViewExtension.swift in Sources */,
 				E0AC378A26F68D40001F1E8F /* CellConfigurable.swift in Sources */,
+				E035E7D526F71FCD008DFA89 /* OwnerModel.swift in Sources */,
 				E0AC379026F68DA1001F1E8F /* UITableViewCellExtension.swift in Sources */,
+				E035E7CF26F71E54008DFA89 /* BaseModel.swift in Sources */,
 				E0AC379426F68DD3001F1E8F /* MockHandler.swift in Sources */,
 				E0AC378C26F68D6D001F1E8F /* UIViewExtension.swift in Sources */,
+				E035E7CB26F71856008DFA89 /* NetworkError.swift in Sources */,
 				E0AC379226F68DBC001F1E8F /* UIViewControllerExtension.swift in Sources */,
+				E035E7D326F71EC6008DFA89 /* RepoModel.swift in Sources */,
 				E0AC375026F68826001F1E8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
