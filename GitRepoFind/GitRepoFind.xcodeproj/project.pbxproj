@@ -18,6 +18,15 @@
 		E035E7D126F71E80008DFA89 /* ReposModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7D026F71E80008DFA89 /* ReposModel.swift */; };
 		E035E7D326F71EC6008DFA89 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7D226F71EC6008DFA89 /* RepoModel.swift */; };
 		E035E7D526F71FCD008DFA89 /* OwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7D426F71FCD008DFA89 /* OwnerModel.swift */; };
+		E035E7D826F72D7B008DFA89 /* ReposRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7D726F72D7B008DFA89 /* ReposRouter.swift */; };
+		E035E7DA26F72DEF008DFA89 /* ReposStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7D926F72DEF008DFA89 /* ReposStore.swift */; };
+		E035E7E426F73D64008DFA89 /* ReposUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7E326F73D64008DFA89 /* ReposUseCase.swift */; };
+		E035E85A26F8194A008DFA89 /* ReposFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E85926F8194A008DFA89 /* ReposFindViewController.swift */; };
+		E035E85D26F81985008DFA89 /* ReposFindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E85C26F81985008DFA89 /* ReposFindViewModel.swift */; };
+		E035E86126F819B1008DFA89 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E85F26F819B1008DFA89 /* RepoTableViewCell.swift */; };
+		E035E86226F819B1008DFA89 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E035E86026F819B1008DFA89 /* RepoTableViewCell.xib */; };
+		E035E86A26F8249A008DFA89 /* RepoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E86926F8249A008DFA89 /* RepoCellViewModel.swift */; };
+		E035E86C26F83B04008DFA89 /* BaseCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E86B26F83B04008DFA89 /* BaseCellDelegate.swift */; };
 		E0AC375026F68826001F1E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC374F26F68826001F1E8F /* AppDelegate.swift */; };
 		E0AC375726F68826001F1E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375526F68826001F1E8F /* Main.storyboard */; };
 		E0AC375926F68828001F1E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375826F68828001F1E8F /* Assets.xcassets */; };
@@ -57,6 +66,15 @@
 		E035E7D026F71E80008DFA89 /* ReposModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposModel.swift; sourceTree = "<group>"; };
 		E035E7D226F71EC6008DFA89 /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
 		E035E7D426F71FCD008DFA89 /* OwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerModel.swift; sourceTree = "<group>"; };
+		E035E7D726F72D7B008DFA89 /* ReposRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposRouter.swift; sourceTree = "<group>"; };
+		E035E7D926F72DEF008DFA89 /* ReposStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposStore.swift; sourceTree = "<group>"; };
+		E035E7E326F73D64008DFA89 /* ReposUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposUseCase.swift; sourceTree = "<group>"; };
+		E035E85926F8194A008DFA89 /* ReposFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposFindViewController.swift; sourceTree = "<group>"; };
+		E035E85C26F81985008DFA89 /* ReposFindViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposFindViewModel.swift; sourceTree = "<group>"; };
+		E035E85F26F819B1008DFA89 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		E035E86026F819B1008DFA89 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
+		E035E86926F8249A008DFA89 /* RepoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellViewModel.swift; sourceTree = "<group>"; };
+		E035E86B26F83B04008DFA89 /* BaseCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellDelegate.swift; sourceTree = "<group>"; };
 		E0AC374C26F68826001F1E8F /* GitRepoFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepoFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC374F26F68826001F1E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0AC375626F68826001F1E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,8 +148,136 @@
 		E035E7C326F71806008DFA89 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				E035E7DF26F73D2E008DFA89 /* UseCase */,
+				E035E7DE26F73D26008DFA89 /* Srore */,
+				E035E7DD26F73D18008DFA89 /* Router */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E035E7DD26F73D18008DFA89 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7E026F73D3F008DFA89 /* Repos */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E035E7DE26F73D26008DFA89 /* Srore */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7E126F73D4D008DFA89 /* Repos */,
+			);
+			path = Srore;
+			sourceTree = "<group>";
+		};
+		E035E7DF26F73D2E008DFA89 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7E226F73D57008DFA89 /* Repos */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		E035E7E026F73D3F008DFA89 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7D726F72D7B008DFA89 /* ReposRouter.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		E035E7E126F73D4D008DFA89 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7D926F72DEF008DFA89 /* ReposStore.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		E035E7E226F73D57008DFA89 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7E326F73D64008DFA89 /* ReposUseCase.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		E035E85826F8191B008DFA89 /* ReposFind */ = {
+			isa = PBXGroup;
+			children = (
+				E035E85926F8194A008DFA89 /* ReposFindViewController.swift */,
+				E035E85E26F81992008DFA89 /* RepoCell */,
+			);
+			path = ReposFind;
+			sourceTree = "<group>";
+		};
+		E035E85B26F8196C008DFA89 /* ReposFind */ = {
+			isa = PBXGroup;
+			children = (
+				E035E85C26F81985008DFA89 /* ReposFindViewModel.swift */,
+				E035E86826F82487008DFA89 /* RepoCell */,
+			);
+			path = ReposFind;
+			sourceTree = "<group>";
+		};
+		E035E85E26F81992008DFA89 /* RepoCell */ = {
+			isa = PBXGroup;
+			children = (
+				E035E86026F819B1008DFA89 /* RepoTableViewCell.xib */,
+				E035E85F26F819B1008DFA89 /* RepoTableViewCell.swift */,
+			);
+			path = RepoCell;
+			sourceTree = "<group>";
+		};
+		E035E86326F819C8008DFA89 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				E0AC379326F68DD3001F1E8F /* MockHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		E035E86426F819E9008DFA89 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7CE26F71E54008DFA89 /* BaseModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E035E86526F819F4008DFA89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7CC26F71D8D008DFA89 /* ErrorModel.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E035E86626F819FF008DFA89 /* ReposFind */ = {
+			isa = PBXGroup;
+			children = (
+				E035E7D026F71E80008DFA89 /* ReposModel.swift */,
+				E035E7D226F71EC6008DFA89 /* RepoModel.swift */,
+				E035E7D426F71FCD008DFA89 /* OwnerModel.swift */,
+			);
+			path = ReposFind;
+			sourceTree = "<group>";
+		};
+		E035E86726F81A13008DFA89 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E0AC379526F68E6E001F1E8F /* BaseCellViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E035E86826F82487008DFA89 /* RepoCell */ = {
+			isa = PBXGroup;
+			children = (
+				E035E86926F8249A008DFA89 /* RepoCellViewModel.swift */,
+			);
+			path = RepoCell;
 			sourceTree = "<group>";
 		};
 		E0AC374326F68826001F1E8F = {
@@ -189,7 +335,8 @@
 		E0AC378026F68A0E001F1E8F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E0AC379526F68E6E001F1E8F /* BaseCellViewModel.swift */,
+				E035E86726F81A13008DFA89 /* Base */,
+				E035E85B26F8196C008DFA89 /* ReposFind */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				E0AC375526F68826001F1E8F /* Main.storyboard */,
+				E035E85826F8191B008DFA89 /* ReposFind */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,11 +353,9 @@
 		E0AC378226F68A1D001F1E8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E035E7CE26F71E54008DFA89 /* BaseModel.swift */,
-				E035E7CC26F71D8D008DFA89 /* ErrorModel.swift */,
-				E035E7D026F71E80008DFA89 /* ReposModel.swift */,
-				E035E7D226F71EC6008DFA89 /* RepoModel.swift */,
-				E035E7D426F71FCD008DFA89 /* OwnerModel.swift */,
+				E035E86426F819E9008DFA89 /* Base */,
+				E035E86526F819F4008DFA89 /* Network */,
+				E035E86626F819FF008DFA89 /* ReposFind */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,7 +365,7 @@
 			children = (
 				E0AC378526F68CF9001F1E8F /* Protocol */,
 				E0AC378626F68D00001F1E8F /* Extension */,
-				E0AC379326F68DD3001F1E8F /* MockHandler.swift */,
+				E035E86326F819C8008DFA89 /* Handlers */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -238,6 +384,7 @@
 			children = (
 				E0AC378726F68D10001F1E8F /* ReusableProtocol.swift */,
 				E0AC378926F68D40001F1E8F /* CellConfigurable.swift */,
+				E035E86B26F83B04008DFA89 /* BaseCellDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -339,6 +486,7 @@
 				E0AC375C26F68828001F1E8F /* LaunchScreen.storyboard in Resources */,
 				E0AC375926F68828001F1E8F /* Assets.xcassets in Resources */,
 				E0AC375726F68826001F1E8F /* Main.storyboard in Resources */,
+				E035E86226F819B1008DFA89 /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,19 +568,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E035E86A26F8249A008DFA89 /* RepoCellViewModel.swift in Sources */,
 				E035E7C926F7184C008DFA89 /* NetworkManager.swift in Sources */,
 				E0AC378826F68D10001F1E8F /* ReusableProtocol.swift in Sources */,
+				E035E7D826F72D7B008DFA89 /* ReposRouter.swift in Sources */,
+				E035E7E426F73D64008DFA89 /* ReposUseCase.swift in Sources */,
 				E035E7CD26F71D8D008DFA89 /* ErrorModel.swift in Sources */,
 				E0AC379626F68E6E001F1E8F /* BaseCellViewModel.swift in Sources */,
 				E035E7C726F7183F008DFA89 /* NetworkConstants.swift in Sources */,
+				E035E7DA26F72DEF008DFA89 /* ReposStore.swift in Sources */,
 				E035E7D126F71E80008DFA89 /* ReposModel.swift in Sources */,
 				E035E7C526F71832008DFA89 /* ApiBaseRouter.swift in Sources */,
 				E0AC378E26F68D89001F1E8F /* UITableViewExtension.swift in Sources */,
+				E035E86126F819B1008DFA89 /* RepoTableViewCell.swift in Sources */,
 				E0AC378A26F68D40001F1E8F /* CellConfigurable.swift in Sources */,
 				E035E7D526F71FCD008DFA89 /* OwnerModel.swift in Sources */,
+				E035E86C26F83B04008DFA89 /* BaseCellDelegate.swift in Sources */,
+				E035E85A26F8194A008DFA89 /* ReposFindViewController.swift in Sources */,
 				E0AC379026F68DA1001F1E8F /* UITableViewCellExtension.swift in Sources */,
 				E035E7CF26F71E54008DFA89 /* BaseModel.swift in Sources */,
 				E0AC379426F68DD3001F1E8F /* MockHandler.swift in Sources */,
+				E035E85D26F81985008DFA89 /* ReposFindViewModel.swift in Sources */,
 				E0AC378C26F68D6D001F1E8F /* UIViewExtension.swift in Sources */,
 				E035E7CB26F71856008DFA89 /* NetworkError.swift in Sources */,
 				E0AC379226F68DBC001F1E8F /* UIViewControllerExtension.swift in Sources */,
