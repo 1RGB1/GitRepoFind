@@ -13,35 +13,27 @@ class ReposFindViewModel {
     
     var usecase: ReposUseCaseProtocol
     
-    let disposeBag = DisposeBag()
-    let cellsViewModelsObserver: PublishSubject<[BaseCellViewModel]> = .init()
-    var cellsViewModels = [BaseCellViewModel]()
-    var currentPage = 1
-    var query = "swift"
-    
     init(usecase: ReposUseCaseProtocol = ReposUseCase()) {
         self.usecase = usecase
     }
     
-    func findReposInPage(_ page: Int, bySearchQuery query: String) {
-        usecase.findGitReposPage(page, bySearchQuery: query).subscribe { [weak self] repos in
-            self?.prepCellsViewModelsWithRepos(repos)
-            self?.cellsViewModelsObserver.onNext(self?.cellsViewModels ?? [BaseCellViewModel]())
-        } onError: { [weak self] in
-            self?.cellsViewModelsObserver.onError($0)
-        }.disposed(by: disposeBag)
+    func findGitReposBySearchQuery(_ query: String) -> Observable<[BaseCellViewModel]> {
+        return usecase.findGitReposBySearchQuery(query)
+            .flatMap { [weak self] repos in
+                return self?.prepCellsViewModelsWithRepos(repos) ?? Observable<[BaseCellViewModel]>.just([])
+            }
     }
     
-    fileprivate func prepCellsViewModelsWithRepos(_ repos: [RepoModel]) {
+    fileprivate func prepCellsViewModelsWithRepos(_ repos: [RepoModel]) -> Observable<[BaseCellViewModel]> {
         
-        if currentPage == 1 {
-            cellsViewModels.removeAll()
-        }
+        var cellsViewModels = [BaseCellViewModel]()
         
         let reposViewModels = repos.map {
             RepoCellViewModel(repoModel: $0)
         }
         
         cellsViewModels.append(contentsOf: reposViewModels)
+        
+        return Observable<[BaseCellViewModel]>.just(cellsViewModels)
     }
  }

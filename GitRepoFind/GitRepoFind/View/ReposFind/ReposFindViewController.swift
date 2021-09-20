@@ -9,7 +9,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import ProgressHUD
-import UIScrollView_InfiniteScroll
 
 class ReposFindViewController: UIViewController {
 
@@ -20,7 +19,6 @@ class ReposFindViewController: UIViewController {
     // MARK: Local attributes
     let disposeBag = DisposeBag()
     let viewModel = ReposFindViewModel()
-    var isSearching = true
     
     // MARK: Life cycle functions
     override func viewDidLoad() {
@@ -29,62 +27,28 @@ class ReposFindViewController: UIViewController {
         configureProgress()
         prepSearchBar()
         prepTableView()
-        bindObservers()
+        bindDataSourceToTableView()
     }
     
     // MARK: Local functions
-    fileprivate func configureProgress() {
-        ProgressHUD.animationType = .lineScaling
-        ProgressHUD.colorHUD = .systemGray
-        ProgressHUD.colorBackground = .lightGray
-        ProgressHUD.colorAnimation = .systemBlue
-        ProgressHUD.colorProgress = .systemBlue
-        ProgressHUD.fontStatus = UIFont(name: "HelveticaNeue-Regular", size: 18) ?? .boldSystemFont(ofSize: 18)
-        
-        let defaultImageConfiguration = UIImage.SymbolConfiguration(scale: .large)
-        if let successImage = UIImage(systemName: "checkmark.circle", withConfiguration: defaultImageConfiguration) {
-            ProgressHUD.imageSuccess = successImage
-        }
-        if let faildImage = UIImage(systemName: "xmark.octagon", withConfiguration: defaultImageConfiguration) {
-            ProgressHUD.imageError = faildImage
-        }
-    }
-    
     fileprivate func prepSearchBar() {
         reposSearchBar.becomeFirstResponder()
         reposSearchBar.searchTextField.delegate = self
     }
     
     fileprivate func prepTableView() {
-        reposTableView.addInfiniteScroll { [weak self] (tableView) in
-            guard let self = self else { return }
-            self.viewModel.currentPage += 1
-            self.isSearching = false
-            self.loadData()
-        }
+        reposTableView.registerCell(RepoTableViewCell.self)
     }
     
-    fileprivate func bindObservers() {
-        bindDataSourceToTableView()
-        viewModel.cellsViewModelsObserver.subscribe { [weak self] cellsViewModels in
-            
-            guard let self = self else { return }
-            if self.isSearching {
-                ProgressHUD.dismiss()
-                ProgressHUD.colorStatus = .systemBlue
-                ProgressHUD.show(icon: .succeed)
-            }
-            self.reposTableView.finishInfiniteScroll()
-            
-        } onError: { [weak self] in
-            
-            guard let self = self else { return }
-            ProgressHUD.colorStatus = .systemRed
-            let error = $0 as? NetworkError
-            ProgressHUD.showError(error?.errorMsg ?? ErrorType.genericError.rawValue, image: nil, interaction: true)
-            self.reposTableView.finishInfiniteScroll()
-            
-        }.disposed(by: disposeBag)
+    fileprivate func handleSuccessState() {
+        ProgressHUD.dismiss()
+        ProgressHUD.colorStatus = .systemBlue
+        ProgressHUD.show(icon: .succeed)
+    }
+    
+    fileprivate func handleFailureState(_ error: String) {
+        ProgressHUD.colorStatus = .systemRed
+        ProgressHUD.showError(error, image: nil, interaction: true)
     }
     
     fileprivate func bindDataSourceToTableView() {
@@ -99,22 +63,23 @@ class ReposFindViewController: UIViewController {
                     return Observable<[BaseCellViewModel]>.just([])
                 } else {
                     ProgressHUD.show()
-                    self.viewModel.findReposInPage(1, bySearchQuery: query)
-                    return self.viewModel.cellsViewModelsObserver.asObservable()
+                    let resultObserver = self.viewModel.findGitReposBySearchQuery(query)
+                    resultObserver.subscribe { cellsViewModels in
+                        self.handleSuccessState()
+                    } onError: {
+                        let error = $0 as? NetworkError
+                        self.handleFailureState(error?.errorMsg ?? ErrorType.genericError.rawValue)
+                    }.disposed(by: self.disposeBag)
+                    
+                    return resultObserver
                 }
             }
             .observe(on: MainScheduler.instance)
         
-        searchResultObservable.bind(to: reposTableView.rx.items(cellIdentifier: RepoTableViewCell.self.reuseIdentifier)) { (row, viewModel: BaseCellViewModel, cell: CellConfigurable) in
+        searchResultObservable.bind(to: reposTableView.rx.items(cellIdentifier: RepoTableViewCell.self.reuseIdentifier)) { (row, viewModel: BaseCellViewModel, cell: RepoTableViewCell) in
             cell.setUp(model: viewModel)
             cell.delegate = self
         }.disposed(by: disposeBag)
-    }
-    
-    @objc
-    fileprivate func loadData() {
-        if isSearching { ProgressHUD.show() }
-        viewModel.findReposInPage(viewModel.currentPage, bySearchQuery: viewModel.query)
     }
 }
 

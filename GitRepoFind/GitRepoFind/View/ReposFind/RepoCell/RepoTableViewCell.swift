@@ -18,7 +18,6 @@ class RepoTableViewCell: UITableViewCell {
     @IBOutlet weak var repoNameLabel: UILabel!
     @IBOutlet weak var repoDescriptionLabel: UILabel!
     @IBOutlet weak var repoAvatarImage: UIImageView!
-    @IBOutlet weak var repoImage: UIImageView!
     @IBOutlet weak var repoLanguageLabel: UILabel!
     @IBOutlet weak var repoForksCountLabel: UILabel!
     @IBOutlet weak var repoWatchersCountLabel: UILabel!
@@ -48,9 +47,6 @@ extension RepoTableViewCell: CellConfigurable {
         
         let logoURL = URL(string: model.repoModel.owner?.avatar_url ?? "")
         repoAvatarImage.kf.setImage(with: logoURL, placeholder: UIImage(named: "githubLogo"), options: [.transition(.fade(1))])
-        
-        let imageURL = URL(string: model.repoModel.html_url ?? "")
-        repoAvatarImage.kf.setImage(with: imageURL, placeholder: UIImage(named: "placeholder"), options: [.transition(.fade(1))])
         
         repoLanguageLabel.text = model.repoModel.language ?? "N/A"
         
