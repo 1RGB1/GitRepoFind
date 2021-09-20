@@ -63,6 +63,7 @@ class ReposFindViewController: UIViewController {
                     return Observable<[BaseCellViewModel]>.just([])
                 } else {
                     ProgressHUD.show()
+                    self.reposSearchBar.resignFirstResponder()
                     let resultObserver = self.viewModel.findGitReposBySearchQuery(query)
                     resultObserver.subscribe { cellsViewModels in
                         self.handleSuccessState()
