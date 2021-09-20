@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 protocol ReposStoreProtocol {
-    func findGitReposPage(_ page: Int, bySearchQuery query: String) -> Observable<Result<ReposModel, NetworkError>>
+    func findGitReposBySearchQuery(_ query: String) -> Observable<Result<ReposModel, NetworkError>> 
 }
 
 struct ReposStore: ReposStoreProtocol {
@@ -19,8 +19,8 @@ struct ReposStore: ReposStoreProtocol {
     ///   - page:  for pagination feature to load page by page
     ///   - query: search query to find all repos related to it
     /// - Returns: Observable containing model in case of success and network error in case of failure
-    func findGitReposPage(_ page: Int, bySearchQuery query: String) -> Observable<Result<ReposModel, NetworkError>> {
-        let reposRouter = ReposRouter.findGitRepos(query, page)
+    func findGitReposBySearchQuery(_ query: String) -> Observable<Result<ReposModel, NetworkError>> {
+        let reposRouter = ReposRouter.findGitRepos(query)
         return NetworkManager.shared.getData(request: reposRouter)
     }
 }

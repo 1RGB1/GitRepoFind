@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 protocol ReposUseCaseProtocol {
-    func findGitReposPage(_ page: Int, bySearchQuery query: String) -> Observable<[RepoModel]>
+    func findGitReposBySearchQuery(_ query: String) -> Observable<[RepoModel]>
 }
 
 struct ReposUseCase: ReposUseCaseProtocol {
@@ -25,8 +25,8 @@ struct ReposUseCase: ReposUseCaseProtocol {
     ///   - page:  for pagination feature to load page by page
     ///   - query: search query to find all repos related to it
     /// - Returns: Observable containing model in case of success and network error in case of failure
-    func findGitReposPage(_ page: Int, bySearchQuery query: String) -> Observable<[RepoModel]> {
-        let observable = reposStore.findGitReposPage(page, bySearchQuery: query)
+    func findGitReposBySearchQuery(_ query: String) -> Observable<[RepoModel]> {
+        let observable = reposStore.findGitReposBySearchQuery(query)
         return mapToRepos(observable)
     }
     
