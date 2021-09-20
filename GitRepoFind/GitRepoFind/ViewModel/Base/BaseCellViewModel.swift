@@ -8,6 +8,4 @@
 import Foundation
 import UIKit
 
-protocol BaseCellViewModel {
-    var type: UITableViewCell.Type { get }
-}
+protocol BaseCellViewModel {}

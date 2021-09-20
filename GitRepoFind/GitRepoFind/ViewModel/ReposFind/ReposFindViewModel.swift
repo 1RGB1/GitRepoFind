@@ -9,10 +9,6 @@ import Foundation
 import UIKit
 import RxSwift
 
-protocol ReposFindViewModelDelegate: AnyObject {
-    func showErrorWithMessage(_ message: String)
-}
-
 class ReposFindViewModel {
     
     var usecase: ReposUseCaseProtocol
@@ -22,7 +18,6 @@ class ReposFindViewModel {
     var cellsViewModels = [BaseCellViewModel]()
     var currentPage = 1
     var query = "swift"
-    weak var delegate: ReposFindViewModelDelegate?
     
     init(usecase: ReposUseCaseProtocol = ReposUseCase()) {
         self.usecase = usecase
@@ -33,7 +28,7 @@ class ReposFindViewModel {
             self?.prepCellsViewModelsWithRepos(repos)
             self?.cellsViewModelsObserver.onNext(self?.cellsViewModels ?? [BaseCellViewModel]())
         } onError: { [weak self] in
-            self?.delegate?.showErrorWithMessage($0.localizedDescription)
+            self?.cellsViewModelsObserver.onError($0)
         }.disposed(by: disposeBag)
     }
     

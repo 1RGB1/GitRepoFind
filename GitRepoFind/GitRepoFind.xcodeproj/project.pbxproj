@@ -39,6 +39,7 @@
 		E0AC379226F68DBC001F1E8F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC379126F68DBC001F1E8F /* UIViewControllerExtension.swift */; };
 		E0AC379426F68DD3001F1E8F /* MockHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC379326F68DD3001F1E8F /* MockHandler.swift */; };
 		E0AC379626F68E6E001F1E8F /* BaseCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC379526F68E6E001F1E8F /* BaseCellViewModel.swift */; };
+		E0B0759526F8CE2300F69430 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B0759426F8CE2300F69430 /* DataExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		E0AC379126F68DBC001F1E8F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E0AC379326F68DD3001F1E8F /* MockHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHandler.swift; sourceTree = "<group>"; };
 		E0AC379526F68E6E001F1E8F /* BaseCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellViewModel.swift; sourceTree = "<group>"; };
+		E0B0759426F8CE2300F69430 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		FEA2AFC8833310C6A8C23DB3 /* Pods-GitRepoFind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -396,6 +398,7 @@
 				E0AC378D26F68D89001F1E8F /* UITableViewExtension.swift */,
 				E0AC378F26F68DA1001F1E8F /* UITableViewCellExtension.swift */,
 				E0AC379126F68DBC001F1E8F /* UIViewControllerExtension.swift */,
+				E0B0759426F8CE2300F69430 /* DataExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				E035E7E426F73D64008DFA89 /* ReposUseCase.swift in Sources */,
 				E035E7CD26F71D8D008DFA89 /* ErrorModel.swift in Sources */,
 				E0AC379626F68E6E001F1E8F /* BaseCellViewModel.swift in Sources */,
+				E0B0759526F8CE2300F69430 /* DataExtension.swift in Sources */,
 				E035E7C726F7183F008DFA89 /* NetworkConstants.swift in Sources */,
 				E035E7DA26F72DEF008DFA89 /* ReposStore.swift in Sources */,
 				E035E7D126F71E80008DFA89 /* ReposModel.swift in Sources */,

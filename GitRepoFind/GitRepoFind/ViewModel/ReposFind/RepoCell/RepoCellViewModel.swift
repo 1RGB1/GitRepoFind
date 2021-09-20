@@ -10,11 +10,9 @@ import UIKit
 
 struct RepoCellViewModel: BaseCellViewModel {
     
-    var type: UITableViewCell.Type
     var repoModel: RepoModel
     
     init(repoModel: RepoModel) {
-        self.type = RepoTableViewCell.self
         self.repoModel = repoModel
     }
 }

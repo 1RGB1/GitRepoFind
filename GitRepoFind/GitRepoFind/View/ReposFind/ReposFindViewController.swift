@@ -65,6 +65,7 @@ class ReposFindViewController: UIViewController {
     }
     
     fileprivate func bindObservers() {
+        bindDataSourceToTableView()
         viewModel.cellsViewModelsObserver.subscribe { [weak self] cellsViewModels in
             
             guard let self = self else { return }
@@ -73,14 +74,14 @@ class ReposFindViewController: UIViewController {
                 ProgressHUD.colorStatus = .systemBlue
                 ProgressHUD.show(icon: .succeed)
             }
-            self.reposTableView.reloadData()
             self.reposTableView.finishInfiniteScroll()
             
         } onError: { [weak self] in
             
             guard let self = self else { return }
             ProgressHUD.colorStatus = .systemRed
-            ProgressHUD.showError($0.localizedDescription, image: nil, interaction: true)
+            let error = $0 as? NetworkError
+            ProgressHUD.showError(error?.errorMsg ?? ErrorType.genericError.rawValue, image: nil, interaction: true)
             self.reposTableView.finishInfiniteScroll()
             
         }.disposed(by: disposeBag)
@@ -92,21 +93,22 @@ class ReposFindViewController: UIViewController {
             .debounce(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
             .debug()
             .flatMap { [weak self] query -> Observable<[BaseCellViewModel]> in
+                guard let self = self else { return Observable<[BaseCellViewModel]>.just([]) }
+                
                 if query.isEmpty {
                     return Observable<[BaseCellViewModel]>.just([])
                 } else {
-                    self?.viewModel.findReposInPage(1, bySearchQuery: query)
-                    return Observable<[BaseCellViewModel]>.just(self?.viewModel.cellsViewModels ?? [])
+                    ProgressHUD.show()
+                    self.viewModel.findReposInPage(1, bySearchQuery: query)
+                    return self.viewModel.cellsViewModelsObserver.asObservable()
                 }
             }
             .observe(on: MainScheduler.instance)
         
-        if viewModel.cellsViewModels.count > 0 {
-            searchResultObservable.bind(to: reposTableView.rx.items(cellIdentifier: viewModel.cellsViewModels[0].type.reuseIdentifier)) { (row, viewModel: BaseCellViewModel, cell: CellConfigurable) in
-                cell.setUp(model: viewModel)
-                cell.delegate = self
-            }.disposed(by: disposeBag)
-        }
+        searchResultObservable.bind(to: reposTableView.rx.items(cellIdentifier: RepoTableViewCell.self.reuseIdentifier)) { (row, viewModel: BaseCellViewModel, cell: CellConfigurable) in
+            cell.setUp(model: viewModel)
+            cell.delegate = self
+        }.disposed(by: disposeBag)
     }
     
     @objc

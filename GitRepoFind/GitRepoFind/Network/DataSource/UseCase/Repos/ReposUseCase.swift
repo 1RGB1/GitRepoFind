@@ -34,7 +34,7 @@ struct ReposUseCase: ReposUseCaseProtocol {
         observable.flatMap { (result: Result<ReposModel, NetworkError>) -> Observable<[RepoModel]> in
             switch result {
             case .success(let model):
-                return Observable<[RepoModel]>.just(model.items ?? [RepoModel]())
+                return Observable<[RepoModel]>.just(model.items ?? [])
             case .failure(let error):
                 return Observable<[RepoModel]>.error(error)
             }
