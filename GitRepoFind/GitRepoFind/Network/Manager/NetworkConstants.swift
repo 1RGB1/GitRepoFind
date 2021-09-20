@@ -10,6 +10,6 @@ struct NetworkConstants {
     /// API's base url
     static let baseUrl = "https://api.github.com/"
     
-    /// API's path for every news feeds
+    /// API's path for searching git repos
     static let searchReposPath = "search/repositories"
 }
