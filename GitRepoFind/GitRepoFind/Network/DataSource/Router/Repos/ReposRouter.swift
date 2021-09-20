@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 enum ReposRouter: ApiBaseRouter {
-    case findGitRepos(String, Int)
+    case findGitRepos(String)
 }
 
 extension ReposRouter {
@@ -20,9 +20,8 @@ extension ReposRouter {
     
     var parameters: [String : Any]? {
         switch self {
-        case .findGitRepos(let query, let page):
-            return ["q" : query,
-                    "page" : page]
+        case .findGitRepos(let query):
+            return ["q" : query]
         }
     }
     
