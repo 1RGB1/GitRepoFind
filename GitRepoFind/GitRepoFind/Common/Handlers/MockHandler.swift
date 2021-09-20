@@ -15,7 +15,9 @@ struct MockHandler<T: Codable> {
                 let decoder = JSONDecoder()
                 let model = try decoder.decode(T.self, from: data)
                 completion(model)
-            } catch {}
+            } catch {
+                print(error)
+            }
         }
     }
 }

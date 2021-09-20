@@ -9,7 +9,6 @@ target 'GitRepoFind' do
   use_frameworks!
 
   # Pods for GitRepoFind
-  pod 'UIScrollView-InfiniteScroll'
   pod 'ProgressHUD'
   pod 'RxAlamofire'
   pod 'Kingfisher'

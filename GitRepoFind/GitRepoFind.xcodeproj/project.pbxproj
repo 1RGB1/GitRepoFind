@@ -40,6 +40,11 @@
 		E0AC379426F68DD3001F1E8F /* MockHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC379326F68DD3001F1E8F /* MockHandler.swift */; };
 		E0AC379626F68E6E001F1E8F /* BaseCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC379526F68E6E001F1E8F /* BaseCellViewModel.swift */; };
 		E0B0759526F8CE2300F69430 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B0759426F8CE2300F69430 /* DataExtension.swift */; };
+		E0B0759A26F9199200F69430 /* RepoCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B0759926F9199200F69430 /* RepoCellViewModelTests.swift */; };
+		E0B075A126F91A4B00F69430 /* ReposFindViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B075A026F91A4B00F69430 /* ReposFindViewModelTests.swift */; };
+		E0B075A226F91D7900F69430 /* ReposMockModel.json in Resources */ = {isa = PBXBuildFile; fileRef = E0B0759E26F91A1800F69430 /* ReposMockModel.json */; };
+		E0B075A526F91F1800F69430 /* ReposUseCaseSuccessMockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B075A426F91F1800F69430 /* ReposUseCaseSuccessMockViewModel.swift */; };
+		E0B075A726F9205700F69430 /* ReposUseCaseFailureMockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B075A626F9205700F69430 /* ReposUseCaseFailureMockViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,11 @@
 		E0AC379326F68DD3001F1E8F /* MockHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHandler.swift; sourceTree = "<group>"; };
 		E0AC379526F68E6E001F1E8F /* BaseCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellViewModel.swift; sourceTree = "<group>"; };
 		E0B0759426F8CE2300F69430 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		E0B0759926F9199200F69430 /* RepoCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellViewModelTests.swift; sourceTree = "<group>"; };
+		E0B0759E26F91A1800F69430 /* ReposMockModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ReposMockModel.json; sourceTree = "<group>"; };
+		E0B075A026F91A4B00F69430 /* ReposFindViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposFindViewModelTests.swift; sourceTree = "<group>"; };
+		E0B075A426F91F1800F69430 /* ReposUseCaseSuccessMockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposUseCaseSuccessMockViewModel.swift; sourceTree = "<group>"; };
+		E0B075A626F9205700F69430 /* ReposUseCaseFailureMockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposUseCaseFailureMockViewModel.swift; sourceTree = "<group>"; };
 		FEA2AFC8833310C6A8C23DB3 /* Pods-GitRepoFind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -318,6 +328,10 @@
 		E0AC376526F68829001F1E8F /* GitRepoFindTests */ = {
 			isa = PBXGroup;
 			children = (
+				E0B075A326F91EF400F69430 /* MockViewModel */,
+				E0B0759B26F919B600F69430 /* MockModel */,
+				E0B0759926F9199200F69430 /* RepoCellViewModelTests.swift */,
+				E0B075A026F91A4B00F69430 /* ReposFindViewModelTests.swift */,
 				E0AC376826F68829001F1E8F /* Info.plist */,
 			);
 			path = GitRepoFindTests;
@@ -403,6 +417,23 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		E0B0759B26F919B600F69430 /* MockModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0B0759E26F91A1800F69430 /* ReposMockModel.json */,
+			);
+			path = MockModel;
+			sourceTree = "<group>";
+		};
+		E0B075A326F91EF400F69430 /* MockViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0B075A426F91F1800F69430 /* ReposUseCaseSuccessMockViewModel.swift */,
+				E0B075A626F9205700F69430 /* ReposUseCaseFailureMockViewModel.swift */,
+			);
+			path = MockViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -458,6 +489,7 @@
 					};
 					E0AC376126F68829001F1E8F = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = E0AC374B26F68826001F1E8F;
 					};
 				};
@@ -488,6 +520,7 @@
 			files = (
 				E0AC375C26F68828001F1E8F /* LaunchScreen.storyboard in Resources */,
 				E0AC375926F68828001F1E8F /* Assets.xcassets in Resources */,
+				E0B075A226F91D7900F69430 /* ReposMockModel.json in Resources */,
 				E0AC375726F68826001F1E8F /* Main.storyboard in Resources */,
 				E035E86226F819B1008DFA89 /* RepoTableViewCell.xib in Resources */,
 			);
@@ -605,6 +638,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B075A526F91F1800F69430 /* ReposUseCaseSuccessMockViewModel.swift in Sources */,
+				E0B075A726F9205700F69430 /* ReposUseCaseFailureMockViewModel.swift in Sources */,
+				E0B0759A26F9199200F69430 /* RepoCellViewModelTests.swift in Sources */,
+				E0B075A126F91A4B00F69430 /* ReposFindViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,8 +835,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D036F0B3884FC4D1547E44F5 /* Pods-GitRepoFindTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitRepoFindTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -810,6 +848,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AhmadRagab.GitRepoFindTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitRepoFind.app/GitRepoFind";
@@ -820,8 +859,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C73B8DC5069F0697CB0F6307 /* Pods-GitRepoFindTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitRepoFindTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;

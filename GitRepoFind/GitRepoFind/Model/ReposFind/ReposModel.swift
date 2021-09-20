@@ -8,7 +8,7 @@
 import Foundation
 
 struct ReposModel: BaseModel {
-    var total_countl: Int?
-    var incomplete_results: Bool?
+    var total_count: Int?
+    var incomplete_results: Int?
     var items: [RepoModel]?
 }

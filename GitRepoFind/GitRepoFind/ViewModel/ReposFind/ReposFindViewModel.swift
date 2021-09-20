@@ -11,16 +11,17 @@ import RxSwift
 
 class ReposFindViewModel {
     
-    var usecase: ReposUseCaseProtocol
+    var useCase: ReposUseCaseProtocol
     
-    init(usecase: ReposUseCaseProtocol = ReposUseCase()) {
-        self.usecase = usecase
+    init(useCase: ReposUseCaseProtocol = ReposUseCase()) {
+        self.useCase = useCase
     }
     
     func findGitReposBySearchQuery(_ query: String) -> Observable<[BaseCellViewModel]> {
-        return usecase.findGitReposBySearchQuery(query)
-            .flatMap { [weak self] repos in
-                return self?.prepCellsViewModelsWithRepos(repos) ?? Observable<[BaseCellViewModel]>.just([])
+        return useCase.findGitReposBySearchQuery(query)
+            .flatMap { [weak self] repos -> Observable<[BaseCellViewModel]> in
+                guard let self = self else { return Observable<[BaseCellViewModel]>.just([]) }
+                return self.prepCellsViewModelsWithRepos(repos)
             }
     }
     

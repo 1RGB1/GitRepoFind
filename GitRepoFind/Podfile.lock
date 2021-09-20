@@ -13,7 +13,6 @@ PODS:
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
-  - UIScrollView-InfiniteScroll (1.1.0)
 
 DEPENDENCIES:
   - Kingfisher
@@ -21,7 +20,6 @@ DEPENDENCIES:
   - RxAlamofire
   - RxCocoa
   - RxSwift
-  - UIScrollView-InfiniteScroll
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -32,7 +30,6 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
-    - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -42,8 +39,7 @@ SPEC CHECKSUMS:
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
-  UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: 447055f930b1606ab8e65f33e033ad1037b8c07c
+PODFILE CHECKSUM: 6862500d9fe38d413d49f2b4bc579d36902dad97
 
 COCOAPODS: 1.10.1
