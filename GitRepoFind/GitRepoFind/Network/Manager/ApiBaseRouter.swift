@@ -46,7 +46,7 @@ extension ApiBaseRouter {
     
     /// To combine all attributes in one url request
     func asURLRequest() throws -> URLRequest {
-        let baseURL = NetworkConfigInfo.getParam(withType: .baseURL)
+        let baseURL = NetworkConfigInfo.shared.getParam(withType: .baseURL)
         let url = try baseURL.asURL()
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         

@@ -60,14 +60,18 @@
 
 /* Begin PBXFileReference section */
 		039BAAC780FCD52748B2DE0F /* Pods-GitRepoFindTests.api.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.api.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.api.xcconfig"; sourceTree = "<group>"; };
+		145B88D1F97845CC57A9113F /* Pods-GitRepoFind.api debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.api debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.api debug.xcconfig"; sourceTree = "<group>"; };
 		2903A5DF548DDC1F28DF50C5 /* Pods-GitRepoFind.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.mock.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.mock.xcconfig"; sourceTree = "<group>"; };
 		300BAC92355B43739DFAFF31 /* Pods-GitRepoFind.api.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.api.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.api.xcconfig"; sourceTree = "<group>"; };
 		43C2791EC92960E3B7A589ED /* Pods_GitRepoFind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitRepoFind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0BAD03E1680350CA33D02D /* Pods_GitRepoFindTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitRepoFindTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		529DF1C8F66BC52C824D58C6 /* Pods-GitRepoFind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.release.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.release.xcconfig"; sourceTree = "<group>"; };
+		764A2D5EE1869BD0843231F9 /* Pods-GitRepoFindTests.mock debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.mock debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.mock debug.xcconfig"; sourceTree = "<group>"; };
+		89EF58AF80DE2B3DFBFB01EB /* Pods-GitRepoFindTests.api debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.api debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.api debug.xcconfig"; sourceTree = "<group>"; };
 		B40DF64847558A0A07D0877A /* Pods-GitRepoFindTests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.mock.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.mock.xcconfig"; sourceTree = "<group>"; };
 		C73B8DC5069F0697CB0F6307 /* Pods-GitRepoFindTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.release.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.release.xcconfig"; sourceTree = "<group>"; };
 		D036F0B3884FC4D1547E44F5 /* Pods-GitRepoFindTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D20BC28AB001195EDEF20FA2 /* Pods-GitRepoFind.mock debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.mock debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.mock debug.xcconfig"; sourceTree = "<group>"; };
 		E035E7C426F71832008DFA89 /* ApiBaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBaseRouter.swift; sourceTree = "<group>"; };
 		E035E7C826F7184C008DFA89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E035E7CA26F71856008DFA89 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -154,6 +158,10 @@
 				300BAC92355B43739DFAFF31 /* Pods-GitRepoFind.api.xcconfig */,
 				B40DF64847558A0A07D0877A /* Pods-GitRepoFindTests.mock.xcconfig */,
 				039BAAC780FCD52748B2DE0F /* Pods-GitRepoFindTests.api.xcconfig */,
+				D20BC28AB001195EDEF20FA2 /* Pods-GitRepoFind.mock debug.xcconfig */,
+				145B88D1F97845CC57A9113F /* Pods-GitRepoFind.api debug.xcconfig */,
+				764A2D5EE1869BD0843231F9 /* Pods-GitRepoFindTests.mock debug.xcconfig */,
+				89EF58AF80DE2B3DFBFB01EB /* Pods-GitRepoFindTests.api debug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -699,69 +707,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E0AC377426F68829001F1E8F /* Debug */ = {
+		E07A140626FA2A820043E451 /* API Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		E0AC377526F68829001F1E8F /* Release */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B075AA26F9D09B00F69430 /* API.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -813,11 +761,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "API Debug";
 		};
-		E0AC377726F68829001F1E8F /* Debug */ = {
+		E07A140726FA2A820043E451 /* API Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEA2AFC8833310C6A8C23DB3 /* Pods-GitRepoFind.debug.xcconfig */;
+			baseConfigurationReference = 145B88D1F97845CC57A9113F /* Pods-GitRepoFind.api debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -833,55 +781,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = "API Debug";
 		};
-		E0AC377826F68829001F1E8F /* Release */ = {
+		E07A140826FA2A820043E451 /* API Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 529DF1C8F66BC52C824D58C6 /* Pods-GitRepoFind.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R2GAVQMNSM;
-				INFOPLIST_FILE = GitRepoFind/SupportingFiles/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AhmadRagab.GitRepoFind;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		E0AC377A26F68829001F1E8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D036F0B3884FC4D1547E44F5 /* Pods-GitRepoFindTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GitRepoFindTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AhmadRagab.GitRepoFindTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitRepoFind.app/GitRepoFind";
-			};
-			name = Debug;
-		};
-		E0AC377B26F68829001F1E8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C73B8DC5069F0697CB0F6307 /* Pods-GitRepoFindTests.release.xcconfig */;
+			baseConfigurationReference = 89EF58AF80DE2B3DFBFB01EB /* Pods-GitRepoFindTests.api debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -900,7 +804,106 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitRepoFind.app/GitRepoFind";
 			};
-			name = Release;
+			name = "API Debug";
+		};
+		E07A140926FA2B3C0043E451 /* Mock Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B075A926F9CFEE00F69430 /* Mock.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Mock Debug";
+		};
+		E07A140A26FA2B3C0043E451 /* Mock Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D20BC28AB001195EDEF20FA2 /* Pods-GitRepoFind.mock debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2GAVQMNSM;
+				INFOPLIST_FILE = GitRepoFind/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AhmadRagab.GitRepoFind;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Mock Debug";
+		};
+		E07A140B26FA2B3C0043E451 /* Mock Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 764A2D5EE1869BD0843231F9 /* Pods-GitRepoFindTests.mock debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GitRepoFindTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AhmadRagab.GitRepoFindTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitRepoFind.app/GitRepoFind";
+			};
+			name = "Mock Debug";
 		};
 		E0B075B126F9D44A00F69430 /* Mock */ = {
 			isa = XCBuildConfiguration;
@@ -1106,35 +1109,35 @@
 		E0AC374726F68826001F1E8F /* Build configuration list for PBXProject "GitRepoFind" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0AC377426F68829001F1E8F /* Debug */,
-				E0AC377526F68829001F1E8F /* Release */,
 				E0B075B126F9D44A00F69430 /* Mock */,
+				E07A140926FA2B3C0043E451 /* Mock Debug */,
 				E0B075BA26F9D54A00F69430 /* API */,
+				E07A140626FA2A820043E451 /* API Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Mock;
 		};
 		E0AC377626F68829001F1E8F /* Build configuration list for PBXNativeTarget "GitRepoFind" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0AC377726F68829001F1E8F /* Debug */,
-				E0AC377826F68829001F1E8F /* Release */,
 				E0B075B226F9D44A00F69430 /* Mock */,
+				E07A140A26FA2B3C0043E451 /* Mock Debug */,
 				E0B075BB26F9D54A00F69430 /* API */,
+				E07A140726FA2A820043E451 /* API Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Mock;
 		};
 		E0AC377926F68829001F1E8F /* Build configuration list for PBXNativeTarget "GitRepoFindTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0AC377A26F68829001F1E8F /* Debug */,
-				E0AC377B26F68829001F1E8F /* Release */,
 				E0B075B326F9D44A00F69430 /* Mock */,
+				E07A140B26FA2B3C0043E451 /* Mock Debug */,
 				E0B075BC26F9D54A00F69430 /* API */,
+				E07A140826FA2A820043E451 /* API Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Mock;
 		};
 /* End XCConfigurationList section */
 	};

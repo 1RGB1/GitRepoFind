@@ -26,7 +26,7 @@ class NetworkManager {
     /// - Returns: Observable containing T in case of success and network error in case of failure
     func getData<T: BaseModel>(request: URLRequestConvertible) -> Observable<Result<T, NetworkError>> {
         
-        let isMock = NetworkConfigInfo.getParam(withType: .apiType).boolValue
+        let isMock = NetworkConfigInfo.shared.getParam(withType: .apiType).boolValue
         
 //        if isMock {
 //            MockHandler().getMockModel(jsonFileName: "ReposMockModel") { [weak self] (model: T) in

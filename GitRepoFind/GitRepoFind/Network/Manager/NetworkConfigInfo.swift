@@ -14,23 +14,32 @@ enum NetworkConfigInfoType: Int {
 
 class NetworkConfigInfo {
     
-    static func getParam(withType type: NetworkConfigInfoType) -> String {
+    private init() {}
+    
+    static let shared: NetworkConfigInfo = {
+        return NetworkConfigInfo()
+    } ()
+    
+    func getParam(withType type: NetworkConfigInfoType) -> String {
         
         let configInfo = getConfigInfo()
+        var param = ""
         
         switch type {
         case .baseURL:
-            return getConfigValue(configInfo: configInfo, forKey: "BASE_URL")
+            param = getConfigValue(configInfo: configInfo, forKey: "BASE_URL")
         case .apiType:
-            return getConfigValue(configInfo: configInfo, forKey: "IS_MOCK")
+            param = getConfigValue(configInfo: configInfo, forKey: "IS_MOCK")
         }
+        
+        return param
     }
     
-    static fileprivate func getConfigInfo() -> [String : Any]? {
+    fileprivate func getConfigInfo() -> [String : Any]? {
         return Bundle.main.infoDictionary
     }
     
-    static fileprivate func getConfigValue(configInfo: [String : Any]?, forKey key: String) -> String {
+    fileprivate func getConfigValue(configInfo: [String : Any]?, forKey key: String) -> String {
         return (configInfo?[key] as? String) ?? ""
     }
 }
