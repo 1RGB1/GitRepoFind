@@ -19,6 +19,7 @@ class ReposFindViewController: UIViewController {
     // MARK: Local attributes
     let disposeBag = DisposeBag()
     let viewModel = ReposFindViewModel()
+    var topTableViewCellIndexPath: IndexPath?
     
     // MARK: Life cycle functions
     override func viewDidLoad() {
@@ -28,6 +29,21 @@ class ReposFindViewController: UIViewController {
         prepSearchBar()
         prepTableView()
         bindDataSourceToTableView()
+    }
+    
+    // MARK: Delegate functions
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+
+        let visibleIndexPaths = self.reposTableView.indexPathsForVisibleRows?.sorted { $0.row < $1.row }
+        self.topTableViewCellIndexPath = visibleIndexPaths?.first
+        
+        coordinator.animate(alongsideTransition: nil) { [weak self] _ in
+            if let indexPath = self?.topTableViewCellIndexPath {
+                self?.reposTableView.scrollToRow(at: indexPath, at: .top, animated: false)
+            }
+        }
+        
+        super.viewWillTransition(to: size, with: coordinator)
     }
     
     // MARK: Local functions
