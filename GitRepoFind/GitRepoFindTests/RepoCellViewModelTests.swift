@@ -13,9 +13,9 @@ class RepoCellViewModelTests: XCTestCase {
     var viewModel: RepoCellViewModel?
 
     override func setUpWithError() throws {
-        MockHandler().getMockModel(jsonFileName: "ReposMockModel") { [weak self] (model: ReposModel) in
+        if let model: ReposModel = MockHandler().getMockModel(jsonFileName: "ReposMockModel") {
             if let items = model.items, items.count > 0 {
-                self?.viewModel = RepoCellViewModel(repoModel: items[0])
+                viewModel = RepoCellViewModel(repoModel: items[0])
             }
         }
     }

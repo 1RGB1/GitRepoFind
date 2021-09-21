@@ -39,6 +39,16 @@
                ReferencedContainer = "container:GitRepoFind.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E09C0A6826FA693F0030CE74"
+               BuildableName = "GitRepoFindTestsTests.xctest"
+               BlueprintName = "GitRepoFindTestsTests"
+               ReferencedContainer = "container:GitRepoFind.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -63,7 +73,7 @@
       </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
+      buildConfiguration = "API Debug"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"

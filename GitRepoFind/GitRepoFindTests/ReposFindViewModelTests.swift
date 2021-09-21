@@ -16,11 +16,9 @@ class ReposFindViewModelTests: XCTestCase {
     var viewModel: ReposFindViewModel?
     let disposeBag = DisposeBag()
 
-    override func setUpWithError() throws {
-    }
+    override func setUpWithError() throws {}
 
-    override func tearDownWithError() throws {
-    }
+    override func tearDownWithError() throws {}
     
     func test_SuccessMock() {
         

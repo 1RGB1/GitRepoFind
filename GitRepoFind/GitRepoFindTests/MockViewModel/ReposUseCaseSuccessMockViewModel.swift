@@ -14,7 +14,7 @@ class ReposUseCaseSuccessMockViewModel: ReposUseCaseProtocol {
         
         var observable = Observable<[RepoModel]>.just([])
         
-        MockHandler().getMockModel(jsonFileName: "ReposMockModel") { (model: ReposModel) in
+        if let model: ReposModel = MockHandler().getMockModel(jsonFileName: "ReposMockModel") {
             if let items = model.items {
                 observable = Observable<[RepoModel]>.just(items)
             }

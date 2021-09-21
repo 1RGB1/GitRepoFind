@@ -8,16 +8,18 @@
 import Foundation
 
 struct MockHandler<T: Codable> {
-    func getMockModel(jsonFileName: String, completion: @escaping (T) -> ()) {
+    func getMockModel(jsonFileName: String) -> T? {
         if let path = Bundle.main.path(forResource: jsonFileName, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let decoder = JSONDecoder()
                 let model = try decoder.decode(T.self, from: data)
-                completion(model)
+                return model
             } catch {
                 print(error)
             }
         }
+        
+        return nil
     }
 }
