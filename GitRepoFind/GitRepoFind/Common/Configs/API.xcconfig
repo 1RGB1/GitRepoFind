@@ -1,0 +1,12 @@
+//
+//  API.xcconfig
+//  GitRepoFind
+//
+//  Created by Ahmad Ragab on 21/09/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = https:/$()/api.github.com/
+IS_MOCK = 0

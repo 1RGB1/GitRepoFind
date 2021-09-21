@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+let SEARCH_REPOS_PATH = "search/repositories"
+
 enum ReposRouter: ApiBaseRouter {
     case findGitRepos(String)
 }
@@ -15,7 +17,7 @@ enum ReposRouter: ApiBaseRouter {
 extension ReposRouter {
     
     var path: String {
-        return NetworkConstants.searchReposPath
+        return SEARCH_REPOS_PATH
     }
     
     var parameters: [String : Any]? {
