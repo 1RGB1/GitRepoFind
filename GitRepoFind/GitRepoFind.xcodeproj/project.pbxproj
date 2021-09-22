@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		976E41112CAF41B00F5D9C16 /* Pods_GitRepoFindTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD53AF460B420DD1EF10C773 /* Pods_GitRepoFindTests.framework */; };
 		E035E7C526F71832008DFA89 /* ApiBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7C426F71832008DFA89 /* ApiBaseRouter.swift */; };
 		E035E7C926F7184C008DFA89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7C826F7184C008DFA89 /* NetworkManager.swift */; };
 		E035E7CB26F71856008DFA89 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7CA26F71856008DFA89 /* NetworkError.swift */; };
@@ -73,7 +72,6 @@
 		A017CEE7C83238C5421CE4C8 /* Pods-GitRepoFindTests.api debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.api debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.api debug.xcconfig"; sourceTree = "<group>"; };
 		A4FC92CC6A631E7B3D544969 /* Pods-GitRepoFindTests.api.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.api.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.api.xcconfig"; sourceTree = "<group>"; };
 		A4FCB82CC153D0819F55C7DD /* Pods-GitRepoFindTests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.mock.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.mock.xcconfig"; sourceTree = "<group>"; };
-		BD53AF460B420DD1EF10C773 /* Pods_GitRepoFindTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitRepoFindTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61B1566D6107908C068C43F /* Pods-GitRepoFind.api.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.api.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.api.xcconfig"; sourceTree = "<group>"; };
 		DCBDB96FE787D2494813AC2C /* Pods-GitRepoFind.mock debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.mock debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.mock debug.xcconfig"; sourceTree = "<group>"; };
 		E035E7C426F71832008DFA89 /* ApiBaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBaseRouter.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				976E41112CAF41B00F5D9C16 /* Pods_GitRepoFindTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				89B58C0F8C0275C7037EE766 /* Pods_GitRepoFind.framework */,
-				BD53AF460B420DD1EF10C773 /* Pods_GitRepoFindTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
