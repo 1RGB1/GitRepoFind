@@ -1,13 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sD4-H2-kX6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="kIS-Wc-Mjr">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="Ghx-4I-9ZX" customClass="AuthViewController" customModule="GitRepoFind" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fyy-Bt-khO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-5p-ooJ">
+                                <rect key="frame" x="15" y="325" width="384" height="246"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pJU-LC-5Wf">
+                                        <rect key="frame" x="72" y="15" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="68Q-cq-MTN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpj-4X-A59">
+                                        <rect key="frame" x="15" y="183" width="354" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="1M9-AZ-VVJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="Authenticte"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mpj-4X-A59" secondAttribute="bottom" constant="15" id="FET-9T-Sqm"/>
+                                    <constraint firstItem="pJU-LC-5Wf" firstAttribute="centerX" secondItem="8Ki-5p-ooJ" secondAttribute="centerX" id="Oyn-S5-4is"/>
+                                    <constraint firstAttribute="trailing" secondItem="mpj-4X-A59" secondAttribute="trailing" constant="15" id="VBr-Xn-bC6"/>
+                                    <constraint firstItem="mpj-4X-A59" firstAttribute="top" secondItem="pJU-LC-5Wf" secondAttribute="bottom" constant="40" id="gXT-cl-X0x"/>
+                                    <constraint firstItem="pJU-LC-5Wf" firstAttribute="top" secondItem="8Ki-5p-ooJ" secondAttribute="top" constant="15" id="mER-by-gee"/>
+                                    <constraint firstItem="mpj-4X-A59" firstAttribute="leading" secondItem="8Ki-5p-ooJ" secondAttribute="leading" constant="15" id="nfX-B4-Mie"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xg5-T4-L4j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Ki-5p-ooJ" firstAttribute="leading" secondItem="xg5-T4-L4j" secondAttribute="leading" constant="15" id="3qB-cD-ZuV"/>
+                            <constraint firstItem="8Ki-5p-ooJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xg5-T4-L4j" secondAttribute="top" constant="15" id="Suu-t1-gZk"/>
+                            <constraint firstItem="8Ki-5p-ooJ" firstAttribute="centerY" secondItem="fyy-Bt-khO" secondAttribute="centerY" id="b1q-El-1YV"/>
+                            <constraint firstItem="8Ki-5p-ooJ" firstAttribute="centerX" secondItem="fyy-Bt-khO" secondAttribute="centerX" id="f86-GR-mFd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nq7-vL-Tec"/>
+                    <connections>
+                        <outlet property="authButton" destination="mpj-4X-A59" id="mpx-Yh-geL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqW-kc-hOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314.49275362318843" y="115.84821428571428"/>
+        </scene>
         <!--Repos Find View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -48,7 +104,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="116"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zGR-cZ-UPE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sD4-H2-kX6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YKO-md-dkP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ghx-4I-9ZX" kind="relationship" relationship="rootViewController" id="UW7-nx-HM9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oE9-vl-4Cu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594.20289855072474" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="githubLogo" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

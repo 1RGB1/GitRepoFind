@@ -30,6 +30,10 @@ struct ReposUseCase: ReposUseCaseProtocol {
         return mapToRepos(observable)
     }
     
+    /// To map observable to observable
+    /// - Parameters:
+    ///   - observable:  Observable containing model in case of success and network error in case of failure
+    /// - Returns: Observable containing array of repo model
     private func mapToRepos(_ observable: Observable<Result<ReposModel, NetworkError>>) -> Observable<[RepoModel]> {
         observable.flatMap { (result: Result<ReposModel, NetworkError>) -> Observable<[RepoModel]> in
             switch result {

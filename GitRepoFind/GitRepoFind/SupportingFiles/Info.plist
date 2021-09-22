@@ -20,8 +20,25 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.AhmadRagab.GitRepoFind</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.202388133551-h3lipjh0avt4hslvtcrdqqjrak2n0lbi</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>CLIENT_ID</key>
+	<string>21644656e1b4e4ce72ee</string>
+	<key>CLIENT_SECRET</key>
+	<string>da3ce0edb502bc94de0fde0ef0fb3f907e305d6e</string>
 	<key>IS_MOCK</key>
 	<string>$(IS_MOCK)</string>
 	<key>LSRequiresIPhoneOS</key>

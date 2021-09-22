@@ -10,6 +10,8 @@ import Foundation
 enum NetworkConfigInfoType: Int {
     case baseURL
     case apiType
+    case clientID
+    case clientSecret
 }
 
 class NetworkConfigInfo {
@@ -22,24 +24,24 @@ class NetworkConfigInfo {
     
     func getParam(withType type: NetworkConfigInfoType) -> String {
         
-        let configInfo = getConfigInfo()
         var param = ""
         
         switch type {
         case .baseURL:
-            param = getConfigValue(configInfo: configInfo, forKey: "BASE_URL")
+            param = getConfigValueForKey("BASE_URL")
         case .apiType:
-            param = getConfigValue(configInfo: configInfo, forKey: "IS_MOCK")
+            param = getConfigValueForKey("IS_MOCK")
+        case .clientID:
+            param = getConfigValueForKey("CLIENT_ID")
+        case .clientSecret:
+            param = getConfigValueForKey("CLIENT_SECRET")
         }
         
         return param
     }
     
-    fileprivate func getConfigInfo() -> [String : Any]? {
-        return Bundle.main.infoDictionary
-    }
-    
-    fileprivate func getConfigValue(configInfo: [String : Any]?, forKey key: String) -> String {
+    fileprivate func getConfigValueForKey(_ key: String) -> String {
+        let configInfo = Bundle.main.infoDictionary
         return (configInfo?[key] as? String) ?? ""
     }
 }

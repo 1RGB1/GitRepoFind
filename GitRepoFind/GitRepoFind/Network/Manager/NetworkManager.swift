@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 import RxAlamofire
 import RxSwift
+import Octokit
 
 /// Singletone manager to handle all api calls
 class NetworkManager {
@@ -52,6 +53,28 @@ class NetworkManager {
                         Observable<Result<T, NetworkError>>.just(.failure(NetworkError(errorMsg: ErrorType.genericError.rawValue)))
                 })
         }
+    }
+    
+    /// To authenticate with github
+    /// - Returns: Observable containing AuthModel in case of success and network error in case of failure
+    func authenticate() -> Observable<Result<AuthModel, NetworkError>> {
+       
+        let observable = AuthServiceHandle.shared.authSuccessObserver
+            .take(1)
+            .flatMap { (token) -> Observable<Result<AuthModel, NetworkError>> in
+                if token.isEmpty {
+                    return Observable<Result<AuthModel, NetworkError>>.just(.failure(NetworkError(errorMsg: ErrorType.badToken.rawValue)))
+                }
+                do {
+                    try KeyChain.shared.save(key: AUTH_TOKEN, value: token)
+                    return Observable<Result<AuthModel, NetworkError>>.just(.success(AuthModel(token: token)))
+                } catch let error {
+                    return Observable<Result<AuthModel, NetworkError>>.just(.failure(NetworkError(errorMsg: error.localizedDescription)))
+                }
+            }
+        
+        AuthServiceHandle.shared.authenticate()
+        return observable
     }
     
     /// To parse response and data into observable

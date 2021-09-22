@@ -18,4 +18,27 @@ extension String {
             return false
         }
     }
+    
+    func getAttributeValue(_ param: String) -> String {
+        
+        let urlComponents = self.components(separatedBy: "&")
+        let result = ""
+        
+        for keyValuePair in urlComponents {
+            let pairComponents = keyValuePair.components(separatedBy: "=")
+            guard var key = pairComponents.first?.removingPercentEncoding else { return result }
+            let value = pairComponents.last?.removingPercentEncoding
+            
+            if key.contains("?") {
+                let keyComponentArray = key.components(separatedBy: "?")
+                key = keyComponentArray.last ?? ""
+            }
+            
+            if key == param {
+                return value ?? ""
+            }
+        }
+        
+        return result
+    }
 }

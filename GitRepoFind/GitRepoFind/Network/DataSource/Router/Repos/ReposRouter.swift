@@ -23,7 +23,8 @@ extension ReposRouter {
     var parameters: [String : Any]? {
         switch self {
         case .findGitRepos(let query):
-            return ["q" : query]
+            return ["accept" : "application/vnd.github.v3+json",
+                    "q" : query]
         }
     }
     
@@ -32,5 +33,33 @@ extension ReposRouter {
         case .findGitRepos:
             return .get
         }
+    }
+    
+    var headers: HTTPHeaders {
+        switch self {
+        case .findGitRepos:
+            var headers: [String : String] = ["token_type" : "bearer"]
+            let accessToken = getAccessToken()
+            
+            if !accessToken.isEmpty {
+                headers["Authorization"] = "token \(getAccessToken())"
+            }
+            
+            return HTTPHeaders(headers)
+        }
+    }
+    
+    func getAccessToken() -> String {
+        do {
+            if let receivedData = try KeyChain.shared.load(tag: AUTH_TOKEN) {
+                let token = receivedData.to(type: String.self)
+                print(token)
+                return token
+            }
+        } catch {
+            return ""
+        }
+        
+        return ""
     }
 }

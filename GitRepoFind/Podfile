@@ -14,6 +14,8 @@ target 'GitRepoFind' do
   pod 'Kingfisher'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
   
   target 'GitRepoFindTests' do
     inherit! :search_paths

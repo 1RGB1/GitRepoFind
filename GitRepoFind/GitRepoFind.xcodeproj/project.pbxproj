@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		976E41112CAF41B00F5D9C16 /* Pods_GitRepoFindTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD53AF460B420DD1EF10C773 /* Pods_GitRepoFindTests.framework */; };
 		E035E7C526F71832008DFA89 /* ApiBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7C426F71832008DFA89 /* ApiBaseRouter.swift */; };
 		E035E7C926F7184C008DFA89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7C826F7184C008DFA89 /* NetworkManager.swift */; };
 		E035E7CB26F71856008DFA89 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035E7CA26F71856008DFA89 /* NetworkError.swift */; };
@@ -29,6 +30,12 @@
 		E09C0A7C26FA699B0030CE74 /* ReposUseCaseSuccessMockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B075A426F91F1800F69430 /* ReposUseCaseSuccessMockViewModel.swift */; };
 		E09C0A7D26FA699B0030CE74 /* RepoCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B0759926F9199200F69430 /* RepoCellViewModelTests.swift */; };
 		E09C0A7E26FA699B0030CE74 /* ReposUseCaseFailureMockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B075A626F9205700F69430 /* ReposUseCaseFailureMockViewModel.swift */; };
+		E09C0A8126FACE780030CE74 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C0A8026FACE780030CE74 /* AuthViewController.swift */; };
+		E09C0A8426FACE8F0030CE74 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C0A8326FACE8F0030CE74 /* AuthViewModel.swift */; };
+		E09C0A8726FAD37A0030CE74 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C0A8626FAD37A0030CE74 /* AuthUseCase.swift */; };
+		E09C0A8A26FAD5A10030CE74 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C0A8926FAD5A10030CE74 /* AuthModel.swift */; };
+		E09C0A8D26FAD5E40030CE74 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C0A8C26FAD5E40030CE74 /* AuthStore.swift */; };
+		E09C0A8F26FAE2F90030CE74 /* KeychainHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C0A8E26FAE2F90030CE74 /* KeychainHandler.swift */; };
 		E0AC375026F68826001F1E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC374F26F68826001F1E8F /* AppDelegate.swift */; };
 		E0AC375726F68826001F1E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375526F68826001F1E8F /* Main.storyboard */; };
 		E0AC375926F68828001F1E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AC375826F68828001F1E8F /* Assets.xcassets */; };
@@ -44,6 +51,8 @@
 		E0B0759526F8CE2300F69430 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B0759426F8CE2300F69430 /* DataExtension.swift */; };
 		E0B075A226F91D7900F69430 /* ReposMockModel.json in Resources */ = {isa = PBXBuildFile; fileRef = E0B0759E26F91A1800F69430 /* ReposMockModel.json */; };
 		E0B075BE26F9D6CE00F69430 /* NetworkConfigInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B075BD26F9D6CE00F69430 /* NetworkConfigInfo.swift */; };
+		E0D9175326FB561A00AB2481 /* AuthServiceHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D9175226FB561A00AB2481 /* AuthServiceHandle.swift */; };
+		E0D9175726FB77DD00AB2481 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0D9175626FB77DD00AB2481 /* GoogleService-Info.plist */; };
 		EC36B1EC1CFB5C926FB74BAC /* Pods_GitRepoFind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B58C0F8C0275C7037EE766 /* Pods_GitRepoFind.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +73,7 @@
 		A017CEE7C83238C5421CE4C8 /* Pods-GitRepoFindTests.api debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.api debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.api debug.xcconfig"; sourceTree = "<group>"; };
 		A4FC92CC6A631E7B3D544969 /* Pods-GitRepoFindTests.api.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.api.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.api.xcconfig"; sourceTree = "<group>"; };
 		A4FCB82CC153D0819F55C7DD /* Pods-GitRepoFindTests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.mock.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.mock.xcconfig"; sourceTree = "<group>"; };
+		BD53AF460B420DD1EF10C773 /* Pods_GitRepoFindTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitRepoFindTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61B1566D6107908C068C43F /* Pods-GitRepoFind.api.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.api.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.api.xcconfig"; sourceTree = "<group>"; };
 		DCBDB96FE787D2494813AC2C /* Pods-GitRepoFind.mock debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFind.mock debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFind/Pods-GitRepoFind.mock debug.xcconfig"; sourceTree = "<group>"; };
 		E035E7C426F71832008DFA89 /* ApiBaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBaseRouter.swift; sourceTree = "<group>"; };
@@ -84,6 +94,12 @@
 		E035E86926F8249A008DFA89 /* RepoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellViewModel.swift; sourceTree = "<group>"; };
 		E035E86B26F83B04008DFA89 /* BaseCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellDelegate.swift; sourceTree = "<group>"; };
 		E07A140426F9E6770043E451 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E09C0A8026FACE780030CE74 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		E09C0A8326FACE8F0030CE74 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E09C0A8626FAD37A0030CE74 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		E09C0A8926FAD5A10030CE74 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		E09C0A8C26FAD5E40030CE74 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
+		E09C0A8E26FAE2F90030CE74 /* KeychainHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHandler.swift; sourceTree = "<group>"; };
 		E0AC374C26F68826001F1E8F /* GitRepoFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepoFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC374F26F68826001F1E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0AC375626F68826001F1E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +125,8 @@
 		E0B075A926F9CFEE00F69430 /* Mock.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Mock.xcconfig; sourceTree = "<group>"; };
 		E0B075AA26F9D09B00F69430 /* API.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = API.xcconfig; sourceTree = "<group>"; };
 		E0B075BD26F9D6CE00F69430 /* NetworkConfigInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigInfo.swift; sourceTree = "<group>"; };
+		E0D9175226FB561A00AB2481 /* AuthServiceHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceHandle.swift; sourceTree = "<group>"; };
+		E0D9175626FB77DD00AB2481 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FADC022C6D62B9AC0945D214 /* Pods-GitRepoFindTests.mock debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitRepoFindTests.mock debug.xcconfig"; path = "Target Support Files/Pods-GitRepoFindTests/Pods-GitRepoFindTests.mock debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976E41112CAF41B00F5D9C16 /* Pods_GitRepoFindTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				89B58C0F8C0275C7037EE766 /* Pods_GitRepoFind.framework */,
+				BD53AF460B420DD1EF10C773 /* Pods_GitRepoFindTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,6 +206,7 @@
 		E035E7DE26F73D26008DFA89 /* Srore */ = {
 			isa = PBXGroup;
 			children = (
+				E09C0A8B26FAD5D80030CE74 /* Auth */,
 				E035E7E126F73D4D008DFA89 /* Repos */,
 			);
 			path = Srore;
@@ -194,6 +215,7 @@
 		E035E7DF26F73D2E008DFA89 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				E09C0A8526FAD3680030CE74 /* Auth */,
 				E035E7E226F73D57008DFA89 /* Repos */,
 			);
 			path = UseCase;
@@ -254,6 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				E0AC379326F68DD3001F1E8F /* MockHandler.swift */,
+				E09C0A8E26FAE2F90030CE74 /* KeychainHandler.swift */,
+				E0D9175226FB561A00AB2481 /* AuthServiceHandle.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -298,6 +322,46 @@
 				E035E86926F8249A008DFA89 /* RepoCellViewModel.swift */,
 			);
 			path = RepoCell;
+			sourceTree = "<group>";
+		};
+		E09C0A7F26FACE550030CE74 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E09C0A8026FACE780030CE74 /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E09C0A8226FACE810030CE74 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E09C0A8326FACE8F0030CE74 /* AuthViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E09C0A8526FAD3680030CE74 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E09C0A8626FAD37A0030CE74 /* AuthUseCase.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E09C0A8826FAD5900030CE74 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E09C0A8926FAD5A10030CE74 /* AuthModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E09C0A8B26FAD5D80030CE74 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E09C0A8C26FAD5E40030CE74 /* AuthStore.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		E0AC374326F68826001F1E8F = {
@@ -352,6 +416,7 @@
 				E0AC375826F68828001F1E8F /* Assets.xcassets */,
 				E0AC375A26F68828001F1E8F /* LaunchScreen.storyboard */,
 				E0AC375D26F68828001F1E8F /* Info.plist */,
+				E0D9175626FB77DD00AB2481 /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -360,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				E035E86726F81A13008DFA89 /* Base */,
+				E09C0A8226FACE810030CE74 /* Auth */,
 				E035E85B26F8196C008DFA89 /* ReposFind */,
 			);
 			path = ViewModel;
@@ -369,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				E0AC375526F68826001F1E8F /* Main.storyboard */,
+				E09C0A7F26FACE550030CE74 /* Auth */,
 				E035E85826F8191B008DFA89 /* ReposFind */,
 			);
 			path = View;
@@ -379,6 +446,7 @@
 			children = (
 				E035E86426F819E9008DFA89 /* Base */,
 				E035E86526F819F4008DFA89 /* Network */,
+				E09C0A8826FAD5900030CE74 /* Auth */,
 				E035E86626F819FF008DFA89 /* ReposFind */,
 			);
 			path = Model;
@@ -542,6 +610,7 @@
 				E0B075A226F91D7900F69430 /* ReposMockModel.json in Resources */,
 				E0AC375726F68826001F1E8F /* Main.storyboard in Resources */,
 				E035E86226F819B1008DFA89 /* RepoTableViewCell.xib in Resources */,
+				E0D9175726FB77DD00AB2481 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,16 +693,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E035E86A26F8249A008DFA89 /* RepoCellViewModel.swift in Sources */,
+				E09C0A8D26FAD5E40030CE74 /* AuthStore.swift in Sources */,
 				E035E7C926F7184C008DFA89 /* NetworkManager.swift in Sources */,
 				E0AC378826F68D10001F1E8F /* ReusableProtocol.swift in Sources */,
 				E035E7D826F72D7B008DFA89 /* ReposRouter.swift in Sources */,
 				E035E7E426F73D64008DFA89 /* ReposUseCase.swift in Sources */,
 				E035E7CD26F71D8D008DFA89 /* ErrorModel.swift in Sources */,
+				E09C0A8126FACE780030CE74 /* AuthViewController.swift in Sources */,
 				E0AC379626F68E6E001F1E8F /* BaseCellViewModel.swift in Sources */,
 				E0B0759526F8CE2300F69430 /* DataExtension.swift in Sources */,
+				E0D9175326FB561A00AB2481 /* AuthServiceHandle.swift in Sources */,
 				E07A140526F9E6770043E451 /* StringExtension.swift in Sources */,
+				E09C0A8726FAD37A0030CE74 /* AuthUseCase.swift in Sources */,
 				E035E7DA26F72DEF008DFA89 /* ReposStore.swift in Sources */,
 				E035E7D126F71E80008DFA89 /* ReposModel.swift in Sources */,
+				E09C0A8A26FAD5A10030CE74 /* AuthModel.swift in Sources */,
 				E035E7C526F71832008DFA89 /* ApiBaseRouter.swift in Sources */,
 				E0AC378E26F68D89001F1E8F /* UITableViewExtension.swift in Sources */,
 				E035E86126F819B1008DFA89 /* RepoTableViewCell.swift in Sources */,
@@ -642,10 +716,12 @@
 				E035E86C26F83B04008DFA89 /* BaseCellDelegate.swift in Sources */,
 				E035E85A26F8194A008DFA89 /* ReposFindViewController.swift in Sources */,
 				E0B075BE26F9D6CE00F69430 /* NetworkConfigInfo.swift in Sources */,
+				E09C0A8426FACE8F0030CE74 /* AuthViewModel.swift in Sources */,
 				E0AC379026F68DA1001F1E8F /* UITableViewCellExtension.swift in Sources */,
 				E035E7CF26F71E54008DFA89 /* BaseModel.swift in Sources */,
 				E0AC379426F68DD3001F1E8F /* MockHandler.swift in Sources */,
 				E035E85D26F81985008DFA89 /* ReposFindViewModel.swift in Sources */,
+				E09C0A8F26FAE2F90030CE74 /* KeychainHandler.swift in Sources */,
 				E0AC378C26F68D6D001F1E8F /* UIViewExtension.swift in Sources */,
 				E035E7CB26F71856008DFA89 /* NetworkError.swift in Sources */,
 				E0AC379226F68DBC001F1E8F /* UIViewControllerExtension.swift in Sources */,

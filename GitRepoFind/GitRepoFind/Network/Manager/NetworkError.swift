@@ -29,4 +29,6 @@ enum ErrorType: String {
     case tryAgainError = "Try again later"
     case parsingFaild = "Failed in parsing data"
     case requestFailed = "Error processing request"
+    case badToken = "Failed to retrieve token"
+    case authFailed = "Failed to authenticate"
 }

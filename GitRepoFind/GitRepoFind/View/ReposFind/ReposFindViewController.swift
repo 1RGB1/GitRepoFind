@@ -25,6 +25,7 @@ class ReposFindViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Find Repos"
         configureProgress()
         prepSearchBar()
         prepTableView()
