@@ -24,6 +24,11 @@
 - Authenticate with github.com
 - Search in all github repos by key
 - Open selected repo page in github.com and show repo's full details
+- Supporting landscape and portrait
+- Reactive and responsive UI
+- Dependency injection
+- Build varient (Mock and API)
+- Unit testing
 
 ## Screenshots
 
