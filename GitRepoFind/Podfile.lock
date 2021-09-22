@@ -90,9 +90,6 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
-  - NBNRequestKit (2.2.0)
-  - OctoKit.swift (0.8.0):
-    - NBNRequestKit (~> 2.0)
   - ProgressHUD (13.6)
   - PromisesObjC (2.0.0)
   - RxAlamofire (6.1.1):
@@ -111,7 +108,6 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Kingfisher
-  - OctoKit.swift
   - ProgressHUD
   - RxAlamofire
   - RxCocoa
@@ -132,8 +128,6 @@ SPEC REPOS:
     - GTMSessionFetcher
     - Kingfisher
     - nanopb
-    - NBNRequestKit
-    - OctoKit.swift
     - ProgressHUD
     - PromisesObjC
     - RxAlamofire
@@ -155,8 +149,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
-  NBNRequestKit: 30c39d8e23e94f935bfc2a25789c44e4a6e1bfdd
-  OctoKit.swift: 2f51efbf888997fc625b91894777e76e9142d95b
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
@@ -164,6 +156,6 @@ SPEC CHECKSUMS:
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
-PODFILE CHECKSUM: 01022c93d035583152b34bcfb21562555d7f60fb
+PODFILE CHECKSUM: a6629d278b61a53f1f3da02ade2f9c683ac19c5e
 
 COCOAPODS: 1.10.1

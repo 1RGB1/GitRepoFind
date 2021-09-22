@@ -42,24 +42,15 @@ extension ReposRouter {
             let accessToken = getAccessToken()
             
             if !accessToken.isEmpty {
-                headers["Authorization"] = "token \(getAccessToken())"
+                headers["Authorization"] = "token \(accessToken)"
             }
             
+            print(headers)
             return HTTPHeaders(headers)
         }
     }
     
     func getAccessToken() -> String {
-        do {
-            if let receivedData = try KeyChain.shared.load(tag: AUTH_TOKEN) {
-                let token = receivedData.to(type: String.self)
-                print(token)
-                return token
-            }
-        } catch {
-            return ""
-        }
-        
-        return ""
+        return KeyChain.shared.load(key: AUTH_TOKEN) ?? ""
     }
 }

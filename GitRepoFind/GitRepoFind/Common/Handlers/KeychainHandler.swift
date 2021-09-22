@@ -33,44 +33,43 @@ class KeyChain {
         return KeyChain()
     } ()
 
-    func save(key: String, value: String) throws {
+    func save(key: String, value: String) {
         
-        let tag = value.data(using: .utf8)!
-        let addQuery: [String : Any] = [kSecClass as String : kSecClassKey,
-                                       kSecAttrApplicationTag as String : tag,
-                                       kSecValueRef as String : key]
+        let data = value.data(using: .utf8, allowLossyConversion: false)!
         
-        let status = SecItemAdd(addQuery as CFDictionary, nil)
-        
-        if status == errSecDuplicateItem {
-            throw KeychainError.duplicateItem
-        }
-        
-        guard status == errSecSuccess else { throw KeychainError.unexpectedStatus(status) }
+        let addQuery: [String : Any] = [kSecClass as String : kSecClassGenericPassword,
+                                       kSecAttrAccount as String : key,
+                                       kSecValueData as String : data]
+    
+
+
+        SecItemDelete(addQuery as CFDictionary)
+        SecItemAdd(addQuery as CFDictionary, nil)
     }
 
-    func load(tag: String) throws -> Data? {
-        let getQuery: [String : Any] = [kSecClass as String : kSecClassKey,
-                                       kSecAttrApplicationTag as String : tag,
-                                       kSecAttrKeyType as String : kSecAttrKeyTypeRSA,
-                                       kSecReturnRef as String : true]
+    func load(key: String) -> String? {
+        
+        let getQuery: [String : Any] = [kSecClass as String : kSecClassGenericPassword,
+                                        kSecAttrAccount as String : key,
+                                        kSecReturnData as String : kCFBooleanTrue!,
+                                        kSecMatchLimit as String : kSecMatchLimitOne]
 
         var dataTypeRef: AnyObject? = nil
 
         let status = SecItemCopyMatching(getQuery as CFDictionary, &dataTypeRef)
 
         guard status != errSecItemNotFound else {
-            throw KeychainError.itemNotFound
+            return nil
         }
             
         guard status == errSecSuccess else {
-            throw KeychainError.unexpectedStatus(status)
+            return nil
         }
         
         guard let value = dataTypeRef as? Data else {
-            throw KeychainError.invalidItemFormat
+            return nil
         }
 
-        return value
+        return String(data: value, encoding: .utf8)
     }
 }

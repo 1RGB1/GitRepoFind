@@ -35,8 +35,8 @@ class ReposFindViewController: UIViewController {
     // MARK: Delegate functions
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 
-        let visibleIndexPaths = self.reposTableView.indexPathsForVisibleRows?.sorted { $0.row < $1.row }
-        self.topTableViewCellIndexPath = visibleIndexPaths?.first
+        let visibleIndexPaths = reposTableView.indexPathsForVisibleRows?.sorted { $0.row < $1.row }
+        topTableViewCellIndexPath = visibleIndexPaths?.first
         
         coordinator.animate(alongsideTransition: nil) { [weak self] _ in
             if let indexPath = self?.topTableViewCellIndexPath {
@@ -82,11 +82,11 @@ class ReposFindViewController: UIViewController {
                     ProgressHUD.show()
                     self.reposSearchBar.resignFirstResponder()
                     let resultObserver = self.viewModel.findGitReposBySearchQuery(query)
-                    resultObserver.subscribe { cellsViewModels in
-                        self.handleSuccessState()
-                    } onError: {
+                    resultObserver.subscribe { [weak self] cellsViewModels in
+                        self?.handleSuccessState()
+                    } onError: { [weak self] in
                         let error = $0 as? NetworkError
-                        self.handleFailureState(error?.errorMsg ?? ErrorType.genericError.rawValue)
+                        self?.handleFailureState(error?.errorMsg ?? ErrorType.genericError.rawValue)
                     }.disposed(by: self.disposeBag)
                     
                     return resultObserver
@@ -94,7 +94,7 @@ class ReposFindViewController: UIViewController {
             }
             .observe(on: MainScheduler.instance)
         
-        searchResultObservable.bind(to: reposTableView.rx.items(cellIdentifier: RepoTableViewCell.self.reuseIdentifier)) { (row, viewModel: BaseCellViewModel, cell: RepoTableViewCell) in
+        searchResultObservable.bind(to: reposTableView.rx.items(cellIdentifier: RepoTableViewCell.self.reuseIdentifier)) { [unowned self] (row, viewModel: BaseCellViewModel, cell: RepoTableViewCell) in
             cell.setUp(model: viewModel)
             cell.delegate = self
         }.disposed(by: disposeBag)

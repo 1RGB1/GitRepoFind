@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 import RxAlamofire
 import RxSwift
-import Octokit
 
 /// Singletone manager to handle all api calls
 class NetworkManager {
@@ -65,12 +64,8 @@ class NetworkManager {
                 if token.isEmpty {
                     return Observable<Result<AuthModel, NetworkError>>.just(.failure(NetworkError(errorMsg: ErrorType.badToken.rawValue)))
                 }
-                do {
-                    try KeyChain.shared.save(key: AUTH_TOKEN, value: token)
-                    return Observable<Result<AuthModel, NetworkError>>.just(.success(AuthModel(token: token)))
-                } catch let error {
-                    return Observable<Result<AuthModel, NetworkError>>.just(.failure(NetworkError(errorMsg: error.localizedDescription)))
-                }
+                KeyChain.shared.save(key: AUTH_TOKEN, value: token)
+                return Observable<Result<AuthModel, NetworkError>>.just(.success(AuthModel(token: token)))
             }
         
         AuthServiceHandle.shared.authenticate()

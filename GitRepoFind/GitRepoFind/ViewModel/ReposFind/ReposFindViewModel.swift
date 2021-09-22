@@ -11,7 +11,7 @@ import RxSwift
 
 class ReposFindViewModel {
     
-    var useCase: ReposUseCaseProtocol
+    private var useCase: ReposUseCaseProtocol
     
     init(useCase: ReposUseCaseProtocol = ReposUseCase()) {
         self.useCase = useCase
